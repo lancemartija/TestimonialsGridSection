@@ -14,6 +14,9 @@ html {
 body {
   padding: 0;
   margin: 0;
+  font-size: 0.8125rem;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 500;
 }
 
 a,
