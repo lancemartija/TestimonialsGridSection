@@ -100,8 +100,8 @@ a:hover {
 
 .card__first {
   background-color: #7541c8;
-  background-image: url("/app/images/bg-pattern-quotation.svg");
-  background-position-x: 90%;
+  background-image: url("https://raw.githubusercontent.com/lancemartija/TestimonialsGridSection/97245d0d1b0d80622de9b06bfd05d48d3302e533/app/images/bg-pattern-quotation.svg");
+  background-position-x: 95%;
   background-repeat: no-repeat;
 }
 
