@@ -56,12 +56,20 @@ a:hover {
   display: grid;
 }
 
-@media (min-width: 64em) {
-  .grid-areas {
-        grid-template-areas: "card-1 card-1 card-2 card-5" "card-3 card-4 card-4 card-5";
-    -ms-grid-columns: (306px)[4];
-        grid-template-columns: repeat(4, 306px);
-  }
+.attribution {
+  background: #48556a;
+  color: #ecf2f8;
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution > a {
+  color: #ecf2f8;
+  text-decoration: underline;
+}
+
+.attribution > a:hover {
+  color: #cfcfcf;
 }
 
 .card {
@@ -92,7 +100,7 @@ a:hover {
 
 .card__first {
   background-color: #7541c8;
-  background-image: url("/images/bg-pattern-quotation.svg");
+  background-image: url("/app/images/bg-pattern-quotation.svg");
   background-position-x: 90%;
   background-repeat: no-repeat;
 }
