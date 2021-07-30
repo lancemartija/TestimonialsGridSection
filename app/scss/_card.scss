@@ -1,0 +1,74 @@
+.card {
+  border-radius: .5rem;
+  margin: 1.5rem;
+  padding: 1.5rem 1.5rem 2.1875rem 1.5rem;
+
+  >h1 {
+    color: $white;
+
+    font: {
+      size: $font-lg;
+      weight: 600;
+    }
+  }
+
+  >p {
+    color: #ffffff70;
+
+    font: {
+      size: $font-sm;
+      weight: 500;
+    }
+  }
+
+  &:is(:nth-child(3)),
+  &:is(:nth-child(5)) {
+    >h1 {
+      color: $very-dark-blackish-blue;
+    }
+
+    >p {
+      color: rgba($color: $very-dark-blackish-blue, $alpha: .7);
+    }
+  }
+
+  &__first {
+    background: $moderate-violet;
+
+    &--heading {
+      @include card-heading-styles($white);
+    }
+  }
+
+  &__second {
+    background: $very-dark-grayish-blue;
+
+    &--heading {
+      @include card-heading-styles($white);
+    }
+  }
+
+  &__third {
+    background: $white;
+
+    &--heading {
+      @include card-heading-styles($very-dark-grayish-blue);
+    }
+  }
+
+  &__fourth {
+    background: $very-dark-blackish-blue;
+
+    &--heading {
+      @include card-heading-styles($white);
+    }
+  }
+
+  &__fifth {
+    background: $white;
+
+    &--heading {
+      @include card-heading-styles($very-dark-grayish-blue);
+    }
+  }
+}
