@@ -1,6 +1,6 @@
 html {
-  font-size: 100%;
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 *,
@@ -10,12 +10,13 @@ html {
 }
 
 body {
-  padding: 0;
+  background: $light-grayish-blue;
   margin: 0;
+  padding: 0;
 
   font: {
-    size: $font-sm;
     family: 'Barlow Semi Condensed', sans-serif;
+    size: $font-sm;
     weight: 500;
   }
 }
@@ -24,4 +25,34 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+// display
+.flex {
+  display: flex;
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-fd-col {
+    flex-direction: column;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &-areas {
+    @include breakpoint-up(large) {
+      grid-template-areas:
+        "card-1 card-1 card-2 card-5"
+        "card-3 card-4 card-4 card-5";
+      grid-template-columns: repeat(4, 306px);
+    }
+  }
 }
