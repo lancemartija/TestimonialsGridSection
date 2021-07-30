@@ -46,13 +46,22 @@ a:hover {
 
 .grid {
   display: grid;
+}
 
-  &-areas {
-    @include breakpoint-up(large) {
-      grid-template-areas:
-        "card-1 card-1 card-2 card-5"
-        "card-3 card-4 card-4 card-5";
-      grid-template-columns: repeat(4, 306px);
+
+// Footer Class
+.attribution {
+  background: $very-dark-grayish-blue;
+  color: $light-grayish-blue;
+  text-align: center;
+  padding: 1rem;
+
+  >a {
+    color: $light-grayish-blue;
+    text-decoration: underline;
+
+    &:hover {
+      color: $light-gray;
     }
   }
 }
