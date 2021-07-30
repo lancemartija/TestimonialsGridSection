@@ -1,13 +1,13 @@
 .card {
   border-radius: .5rem;
   margin: 1.5rem;
-  padding: 1.5rem 1.5rem 2.1875rem 1.5rem;
+  padding: 1.5rem 1.875rem 2.1875rem 1.875rem;
 
   >h1 {
     color: $white;
 
     font: {
-      size: $font-lg;
+      size: $font-lg - .125rem;
       weight: 600;
     }
   }
@@ -33,7 +33,13 @@
   }
 
   &__first {
-    background: $moderate-violet;
+
+    background: {
+      color: $moderate-violet;
+      image: url('/images/bg-pattern-quotation.svg');
+      position-x: 90%;
+      repeat: no-repeat;
+    }
 
     &--heading {
       @include card-heading-styles($white);
