@@ -77,7 +77,7 @@ a:hover {
   color: #7541c8;
 }
 
-@media (min-width: 87.5em) {
+@media (min-width: 64em) {
   .attribution {
     position: absolute;
     bottom: 0;
@@ -91,11 +91,21 @@ a:hover {
   display: grid;
 }
 
-.main__container {
-  margin: 4.15rem 0;
+@media (min-width: 40em) {
+  .main__container {
+    padding: .75rem;
+  }
 }
 
-@media (min-width: 87.5em) {
+@media (max-width: 63.9375em) {
+  .main__container {
+    margin: 4.15rem 0;
+    -ms-grid-columns: (minmax(375px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  }
+}
+
+@media (min-width: 64em) {
   .main__container {
     grid-gap: 1.25rem;
     -ms-grid-columns: (275px)[4];
@@ -116,13 +126,19 @@ a:hover {
   -ms-grid-rows: 1.25rem;
       grid-template-rows: 1.25rem;
   border-radius: .5rem;
-  -webkit-box-shadow: 40px 60px 50px -47px rgba(25, 33, 46, 0.25);
-          box-shadow: 40px 60px 50px -47px rgba(25, 33, 46, 0.25);
+  -webkit-box-shadow: 40px 60px 50px -47px rgba(25, 33, 46, 0.3);
+          box-shadow: 40px 60px 50px -47px rgba(25, 33, 46, 0.3);
   margin: .75rem 1.5rem;
   padding: 1.5rem 2.6rem 1.5rem 1.5rem;
 }
 
-@media (min-width: 87.5em) {
+@media (min-width: 40em) {
+  .card {
+    margin: .75rem;
+  }
+}
+
+@media (min-width: 64em) {
   .card {
     margin: 0;
     padding: 1.5rem 2.75rem 1.5rem 2.25rem;
@@ -169,7 +185,7 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 87.5em) {
+@media (min-width: 64em) {
   .card__first {
     grid-area: card-1;
     background-position-x: 80%;
@@ -200,7 +216,7 @@ a:hover {
   background: #48556a;
 }
 
-@media (min-width: 87.5em) {
+@media (min-width: 64em) {
   .card__second {
     grid-area: card-2;
   }
@@ -230,7 +246,7 @@ a:hover {
   background: white;
 }
 
-@media (min-width: 87.5em) {
+@media (min-width: 64em) {
   .card__third {
     grid-area: card-3;
   }
@@ -260,7 +276,7 @@ a:hover {
   background: #19212e;
 }
 
-@media (min-width: 87.5em) {
+@media (min-width: 64em) {
   .card__fourth {
     grid-area: card-4;
   }
@@ -290,7 +306,7 @@ a:hover {
   background: white;
 }
 
-@media (min-width: 87.5em) {
+@media (min-width: 64em) {
   .card__fifth {
     grid-area: card-5;
   }
