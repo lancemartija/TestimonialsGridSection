@@ -2,7 +2,6 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 100%;
-  position: relative;
 }
 
 *,
@@ -14,8 +13,8 @@ html {
 
 body {
   background: #ecf2f8;
-  margin: 0 auto;
-  max-width: 1440px;
+  line-height: 1.3;
+  margin: 0;
   padding: 0;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 0.8125rem;
@@ -64,23 +63,27 @@ a:hover {
 }
 
 .attribution {
-  background: #48556a;
-  color: #ecf2f8;
+  color: #19212e;
   text-align: center;
   padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .attribution > a {
-  color: #ecf2f8;
+  color: #a3a3a3;
   text-decoration: underline;
 }
 
 .attribution > a:hover {
-  color: #cfcfcf;
+  color: #7541c8;
+}
+
+@media (min-width: 87.5em) {
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .main {
@@ -88,22 +91,65 @@ a:hover {
   display: grid;
 }
 
+.main__container {
+  margin: 4.15rem 0;
+}
+
+@media (min-width: 87.5em) {
+  .main__container {
+    grid-gap: 1.25rem;
+    -ms-grid-columns: (275px)[4];
+        grid-template-columns: repeat(4, 275px);
+        grid-template-areas: "card-1 card-1 card-2 card-5" "card-3 card-4 card-4 card-5";
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
 .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1.25rem;
+      grid-template-rows: 1.25rem;
   border-radius: .5rem;
   margin: .75rem 1.5rem;
-  padding: 1.5rem 1.875rem 2.1875rem 1.875rem;
+  padding: 1.5rem 2.6rem 1.5rem 1.5rem;
+}
+
+@media (min-width: 87.5em) {
+  .card {
+    margin: 0;
+    padding: 1.5rem 2.75rem 1.5rem 2.25rem;
+  }
 }
 
 .card > h1 {
   color: white;
-  font-size: 1.375rem;
+  font-size: 1.3rem;
   font-weight: 600;
+  margin-bottom: 0;
+}
+
+@media (max-width: 63.9375em) {
+  .card > h1 {
+    font-size: 1.25rem;
+  }
 }
 
 .card > p {
   color: #ffffff70;
-  font-size: 0.8125rem;
+  font-font-size: 1rem;
   font-weight: 500;
+}
+
+@media (max-width: 63.9375em) {
+  .card > p {
+    size: 0.8125rem;
+  }
 }
 
 .card:is(:nth-child(3)) > h1, .card:is(:nth-child(5)) > h1 {
@@ -117,8 +163,15 @@ a:hover {
 .card__first {
   background-color: #7541c8;
   background-image: url("https://raw.githubusercontent.com/lancemartija/TestimonialsGridSection/97245d0d1b0d80622de9b06bfd05d48d3302e533/app/images/bg-pattern-quotation.svg");
-  background-position-x: 95%;
+  background-position-x: 85%;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 87.5em) {
+  .card__first {
+    grid-area: card-1;
+    background-position-x: 80%;
+  }
 }
 
 .card__first--heading {
@@ -145,6 +198,12 @@ a:hover {
   background: #48556a;
 }
 
+@media (min-width: 87.5em) {
+  .card__second {
+    grid-area: card-2;
+  }
+}
+
 .card__second--heading {
   color: white;
 }
@@ -167,6 +226,12 @@ a:hover {
 
 .card__third {
   background: white;
+}
+
+@media (min-width: 87.5em) {
+  .card__third {
+    grid-area: card-3;
+  }
 }
 
 .card__third--heading {
@@ -193,6 +258,12 @@ a:hover {
   background: #19212e;
 }
 
+@media (min-width: 87.5em) {
+  .card__fourth {
+    grid-area: card-4;
+  }
+}
+
 .card__fourth--heading {
   color: white;
 }
@@ -215,6 +286,12 @@ a:hover {
 
 .card__fifth {
   background: white;
+}
+
+@media (min-width: 87.5em) {
+  .card__fifth {
+    grid-area: card-5;
+  }
 }
 
 .card__fifth--heading {
