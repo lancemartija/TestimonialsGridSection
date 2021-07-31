@@ -19,6 +19,11 @@ body {
     size: $font-sm;
     weight: 500;
   }
+
+  ::selection {
+    background: $light-gray;
+    color: $very-dark-grayish-blue;
+  }
 }
 
 a,
