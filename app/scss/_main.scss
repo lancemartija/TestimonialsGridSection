@@ -2,9 +2,16 @@
   display: grid;
 
   &__container {
-    margin: 4.15rem 0;
+    @include breakpoint-up(medium) {
+      padding: .75rem;
+    }
 
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-down(medium) {
+      margin: 4.15rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    }
+
+    @include breakpoint-up(large) {
       grid-gap: 1.25rem;
       grid-template-columns: repeat(4, 275px);
       grid-template-areas:
