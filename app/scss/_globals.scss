@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  position: relative;
 }
 
 *,
@@ -11,7 +12,8 @@ html {
 
 body {
   background: $light-grayish-blue;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
   padding: 0;
 
   font: {
@@ -21,7 +23,7 @@ body {
   }
 
   ::selection {
-    background: $light-gray;
+    background: $light-grayish-blue;
     color: $very-dark-grayish-blue;
   }
 }
@@ -49,10 +51,6 @@ a:hover {
   }
 }
 
-.grid {
-  display: grid;
-}
-
 
 // Footer Class
 .attribution {
@@ -60,6 +58,10 @@ a:hover {
   color: $light-grayish-blue;
   text-align: center;
   padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   >a {
     color: $light-grayish-blue;
