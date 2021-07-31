@@ -1,14 +1,27 @@
 .card {
+  display: grid;
+  grid-template-rows: 1.25rem;
   border-radius: .5rem;
   margin: .75rem 1.5rem;
-  padding: 1.5rem 1.875rem 2.1875rem 1.875rem;
+  padding: 1.5rem 2.6rem 1.5rem 1.5rem;
+
+  @include breakpoint-up(xlarge) {
+    margin: 0;
+    padding: 1.5rem 2.75rem 1.5rem 2.25rem;
+  }
 
   >h1 {
     color: $white;
 
     font: {
-      size: $font-lg - .125rem;
+      size: $font-lg - .2rem;
       weight: 600;
+    }
+
+    margin-bottom: 0;
+
+    @include breakpoint-down(medium) {
+      font-size: $font-lg - .25rem;
     }
   }
 
@@ -16,8 +29,12 @@
     color: #ffffff70;
 
     font: {
-      size: $font-sm;
+      font-size: $font-med;
       weight: 500;
+    }
+
+    @include breakpoint-down(medium) {
+      size: $font-sm;
     }
   }
 
@@ -33,11 +50,15 @@
   }
 
   &__first {
+    @include breakpoint-up(xlarge) {
+      grid-area: card-1;
+      background-position-x: 80%;
+    }
 
     background: {
       color: $moderate-violet;
       image: url('https://raw.githubusercontent.com/lancemartija/TestimonialsGridSection/97245d0d1b0d80622de9b06bfd05d48d3302e533/app/images/bg-pattern-quotation.svg');
-      position-x: 95%;
+      position-x: 85%;
       repeat: no-repeat;
     }
 
@@ -47,6 +68,10 @@
   }
 
   &__second {
+    @include breakpoint-up(xlarge) {
+      grid-area: card-2;
+    }
+
     background: $very-dark-grayish-blue;
 
     &--heading {
@@ -55,6 +80,10 @@
   }
 
   &__third {
+    @include breakpoint-up(xlarge) {
+      grid-area: card-3;
+    }
+
     background: $white;
 
     &--heading {
@@ -63,6 +92,10 @@
   }
 
   &__fourth {
+    @include breakpoint-up(xlarge) {
+      grid-area: card-4;
+    }
+
     background: $very-dark-blackish-blue;
 
     &--heading {
@@ -71,6 +104,10 @@
   }
 
   &__fifth {
+    @include breakpoint-up(xlarge) {
+      grid-area: card-5;
+    }
+
     background: $white;
 
     &--heading {
