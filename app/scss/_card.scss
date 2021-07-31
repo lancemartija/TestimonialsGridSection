@@ -2,11 +2,15 @@
   display: grid;
   grid-template-rows: 1.25rem;
   border-radius: .5rem;
-  box-shadow: 40px 60px 50px -47px rgba($color: $very-dark-blackish-blue, $alpha: .25);
+  box-shadow: 40px 60px 50px -47px rgba($color: $very-dark-blackish-blue, $alpha: .3);
   margin: .75rem 1.5rem;
   padding: 1.5rem 2.6rem 1.5rem 1.5rem;
 
-  @include breakpoint-up(xlarge) {
+  @include breakpoint-up(medium) {
+    margin: .75rem;
+  }
+
+  @include breakpoint-up(large) {
     margin: 0;
     padding: 1.5rem 2.75rem 1.5rem 2.25rem;
   }
@@ -51,7 +55,7 @@
   }
 
   &__first {
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       grid-area: card-1;
       background-position-x: 80%;
     }
@@ -69,7 +73,7 @@
   }
 
   &__second {
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       grid-area: card-2;
     }
 
@@ -81,7 +85,7 @@
   }
 
   &__third {
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       grid-area: card-3;
     }
 
@@ -93,7 +97,7 @@
   }
 
   &__fourth {
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       grid-area: card-4;
     }
 
@@ -105,7 +109,7 @@
   }
 
   &__fifth {
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       grid-area: card-5;
     }
 
