@@ -83,6 +83,11 @@ a:hover {
   color: #cfcfcf;
 }
 
+.main {
+  display: -ms-grid;
+  display: grid;
+}
+
 .card {
   border-radius: .5rem;
   margin: .75rem 1.5rem;
