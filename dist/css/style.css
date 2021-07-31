@@ -20,6 +20,16 @@ body {
   font-weight: 500;
 }
 
+body ::-moz-selection {
+  background: #cfcfcf;
+  color: #48556a;
+}
+
+body ::selection {
+  background: #cfcfcf;
+  color: #48556a;
+}
+
 a,
 a:visited,
 a:hover {
