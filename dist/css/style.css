@@ -116,6 +116,8 @@ a:hover {
   -ms-grid-rows: 1.25rem;
       grid-template-rows: 1.25rem;
   border-radius: .5rem;
+  -webkit-box-shadow: 40px 60px 50px -47px rgba(25, 33, 46, 0.25);
+          box-shadow: 40px 60px 50px -47px rgba(25, 33, 46, 0.25);
   margin: .75rem 1.5rem;
   padding: 1.5rem 2.6rem 1.5rem 1.5rem;
 }
