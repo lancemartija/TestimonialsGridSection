@@ -1,5 +1,20 @@
 .main {
   display: grid;
 
-  &__container {}
+  &__container {
+    margin: 4.15rem 0;
+
+    @include breakpoint-up(xlarge) {
+      grid-gap: 1.25rem;
+      grid-template-columns: repeat(4, 275px);
+      grid-template-areas:
+        "card-1 card-1 card-2 card-5"
+        "card-3 card-4 card-4 card-5";
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
